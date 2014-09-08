@@ -37,3 +37,6 @@ function challenge_deploy_update_7100() {
   _challenge_enable_modules();
 }
 
+function challenge_deploy_update_7101() {
+  module_enable(array('themekey'));
+}
