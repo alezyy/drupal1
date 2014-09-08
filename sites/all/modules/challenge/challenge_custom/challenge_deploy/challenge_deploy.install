@@ -32,6 +32,7 @@ function _challenge_enable_modules() {
  * Deployment function for 1st deployment
  * Enable Adminimal theme and menu helper, Features, Strongarm, VBO, Views
  */
+
 function challenge_deploy_update_7100() {
   _challenge_enable_modules();
 }
