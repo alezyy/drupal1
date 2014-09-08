@@ -40,3 +40,7 @@ function challenge_deploy_update_7100() {
 function challenge_deploy_update_7101() {
   module_enable(array('themekey'));
 }
+
+function challenge_deploy_update_7102() {
+   module_enable (array('features'));
+}
