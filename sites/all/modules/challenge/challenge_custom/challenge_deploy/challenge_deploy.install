@@ -47,5 +47,5 @@ function challenge_deploy_update_7102() {
 
 
 function challenge_deploy_update_7103) {
-   module_enable (array('superfish', 'libraries','jquery_update'));
+   module_enable (array('superfish', 'libraries','query_update','admin_menu'));
 }
