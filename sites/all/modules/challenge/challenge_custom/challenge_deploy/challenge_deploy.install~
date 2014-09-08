@@ -1,0 +1,51 @@
+<?php
+/**
+ * @file
+ * Install file for Deploy Update
+ */
+
+function challenge_deploy_install() {
+  $func_proto = 'challenge_deploy_update_';
+  for ($i = 7100; $i < 8000; $i++) {
+    $func = $func_proto . $i;
+    if (function_exists($func)) {
+      $func();
+    } 
+  }
+}
+
+/**
+ * Install & Enable base modules
+ */
+function _challenge_enable_modules() {
+  $enable = array(
+   'themeKey', 
+  );
+  $disable = array(
+  );
+  module_enable($enable);
+  module_disable($disable);
+
+}
+
+/**
+ * Deployment function for 1st deployment
+ * Enable Adminimal theme and menu helper, Features, Strongarm, VBO, Views
+ */
+
+function challenge_deploy_update_7100() {
+  _challenge_enable_modules();
+}
+
+function challenge_deploy_update_7101() {
+  module_enable(array('themekey'));
+}
+
+function challenge_deploy_update_7102() {
+   module_enable (array('features'));
+}
+
+
+function challenge_deploy_update_7103() {
+   module_enable (array('superfish', 'libraries','query_update','admin_menu'));
+}
